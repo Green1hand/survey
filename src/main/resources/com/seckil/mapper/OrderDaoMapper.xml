@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.example.seckil.dao.OrderDao">
+
+    <!--创建订单-->
+    <insert id="createOrder" parameterType="com.example.seckil.dao.OrderDao" useGeneratedKeys="true" keyProperty="id">
+        insert into stock_order
+        values (#{id}, #{stickId}, #{name}, #{createTime});
+    </insert>
+</mapper>
